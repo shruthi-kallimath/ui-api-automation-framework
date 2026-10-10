@@ -1,0 +1,14 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+allure-results*/
+allure-report*/
+test-results.xml
+mobile-results.xml
+*.log
+.env
+.env.*
+!.env.example
+*.apk

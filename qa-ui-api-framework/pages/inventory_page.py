@@ -15,7 +15,9 @@ class InventoryPage:
         return self.page_title.text_content()
     
     def get_inventory_count(self):
+        self.inventory_items.first.wait_for(state="visible")
         return self.inventory_items.count()
-    
+
     def is_page_title_visible(self):
+        self.page_title.wait_for(state="visible")
         return self.page_title.is_visible()
