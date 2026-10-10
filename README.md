@@ -120,4 +120,4 @@ allure serve allure-results-final
 
 ## Scope
 
-The mobile tests demonstrate login success and rejection of invalid credentials. Biometric and identity-document verification are not covered.
+The mobile tests demonstrate login success and rejection of invalid credentials. 
