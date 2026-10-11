@@ -121,3 +121,14 @@ allure serve allure-results-final
 ## Scope
 
 The mobile tests demonstrate login success and rejection of invalid credentials. 
+
+## Mobile Test Structure
+
+- `pages/mobile_login_page.py`: reusable mobile locators, waits and login actions.
+- `test_data/mobile_login_data.json`: demo credentials and expected error message.
+- `tests/mobile/conftest.py`: Appium driver setup and test data loading.
+- `tests/mobile/test_mobile_login.py`: valid and invalid login scenarios.
+
+The valid-login test keeps explicit steps for demonstration.
+The invalid-login test uses the Page Object Model and external JSON
+test data to demonstrate maintainability.
