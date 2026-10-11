@@ -1,0 +1,11 @@
+{
+  "valid_login": {
+    "username": "bob@example.com",
+    "password": "10203040"
+  },
+  "invalid_login": {
+    "username": "bob@example.com",
+    "password": "wrongpassword",
+    "expected_error": "Provided credentials do not match any user in this service."
+  }
+}

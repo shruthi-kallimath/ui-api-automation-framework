@@ -1,4 +1,6 @@
 import pytest
+import json
+from pathlib import Path
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium.webdriver.common.appiumby import AppiumBy
@@ -40,3 +42,15 @@ def mobile_driver():
         yield driver
     finally:
         driver.quit()
+        
+
+@pytest.fixture(scope="session")
+def mobile_login_data():
+    data_path = (
+        Path(__file__).resolve().parents[2]
+        / "test_data"
+        / "mobile_login_data.json"
+    )
+
+    with data_path.open(encoding="utf-8") as file:
+        return json.load(file)
